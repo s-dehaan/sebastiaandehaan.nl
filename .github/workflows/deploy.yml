@@ -45,6 +45,7 @@ jobs:
 
       - name: Run the e2e tests
         run: |
+          npx playwright install
           npm run test:e2e
           
       - name: Upload artifact
