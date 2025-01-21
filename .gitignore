@@ -253,3 +253,7 @@ $RECYCLE.BIN/
 *.lnk
 
 # End of https://www.toptal.com/developers/gitignore/api/vue,vuejs,windows,macos,linux,node,visualstudiocode
+
+# Custom additions
+playwright-report
+test-results
