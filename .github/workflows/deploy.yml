@@ -21,6 +21,10 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
+  # Scan for vulnerabilities
+  scan:
+    uses: "google/osv-scanner-action/.github/workflows/osv-scanner-reusable.yml@v2.0.1"
+
   # Build job
   build:
     runs-on: ubuntu-latest
@@ -31,7 +35,7 @@ jobs:
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
-          node-version: "20"
+          node-version: "22"
           
       # Install dependencies and build the project
       - name: Install and build
